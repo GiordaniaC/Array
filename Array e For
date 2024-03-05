@@ -1,0 +1,32 @@
+var temperatura = new Array(); //Creo array vuoto
+ 
+for (var i = 1; i<=7; i++) {
+    var temp = prompt("Inserisci una temperatura: ");
+    temperatura.push(temp);
+}
+console.log(temperatura);
+ 
+/*var somma = 0;
+per (el in temperatura) {
+    var t = parseInt(temperatura[el]);
+    somma += t ;
+}*/
+ 
+var somma= 0;
+for (var j=0; j<7; j++) {
+    var t = parseInt(temperatura[j]);
+    somma+=t;
+}
+ 
+var media = somma/7 ;
+console.log(media);
+
+for (var s=0; s<7; s++) {
+    if (parseInt(temperatura[s]) > media) {
+        console.log("La temperatura è superiore alla media");
+    } else if (parseInt(temperatura[s]) < media) {
+        console.log("La temperatura è inferiore alla media");
+    } else if (parseInt(temperatura[s]) == media) {
+        console.log("La temperatura è uguale alla media");
+    }
+}
